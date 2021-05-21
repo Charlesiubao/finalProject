@@ -37,4 +37,4 @@ user can create an account and upload memes based on dev category.
 # ERD
 
 
-![tables](readmefiles/erd.jpg)
+![tables](readmefiles/erd.JPG)
