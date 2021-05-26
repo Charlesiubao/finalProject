@@ -1,4 +1,7 @@
 const Home = () => {
+  const latestPost = () => {
+    
+  }
   return (
       <div>
           Home Page

@@ -1,13 +1,41 @@
-/* .App {
-  text-align: center;
-  font-family: 'Cousine', monospace;
-
-} */
-
+html {
+  background-color: black;
+  margin: 25px;
+}
 * {
   box-sizing: border-box;
   margin: 0%;
   padding: 0;
   font-family: 'Cousine', monospace;
+  color: white;
 }
+
+.App {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: black;
+}
+
+.signupPage, .loginPage {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.loginForm, .signupForm {
+  margin: 3% auto;
+  width: 10em;
+  text-align: center;
+  position: relative;
+  -webkit-animation: moveDown .3s;
+  -moz-animation: moveDown .3s;
+  animation: moveDown .3s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+
+
 

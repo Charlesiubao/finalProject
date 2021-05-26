@@ -1,8 +1,8 @@
 import {useState} from 'react'
 import axios from 'axios'
 import { useContext } from 'react'
- import { UserContext } from '../context/UserContext'
- import {Redirect} from 'react-router-dom'
+import { UserContext } from '../contexts/UserContext'
+import {Redirect} from 'react-router-dom'
 
 const Login = () => {
   const [email, setEmail] = useState ('')
@@ -19,7 +19,7 @@ const Login = () => {
           console.log(response)
           localStorage.setItem('userId', response.data.userId)
           fetchUser()
-          // setUser(response.data)
+          setUser(response.data)
           setShouldRedirect(true)
       })
   }
@@ -27,14 +27,14 @@ const Login = () => {
   return (
     <div className="loginPage">
     { shouldRedirect && <Redirect to={`/`} exact /> }
-     <form className ="loginForm" onSubmit={loginForm}>
+    <form className ="loginForm" onSubmit={loginForm}>
           <h2>Login</h2>
-           
-             <input placeholder="Email" value={email} onChange ={(e) => setEmail(e.target.value)} />
-             <input placeholder="Password" value={password} onChange ={(e) => setPassword(e.target.value)} />
-             <input type="submit" value = "Login!"/>
-         
-     </form>
+          
+            <input placeholder="Email" value={email} onChange ={(e) => setEmail(e.target.value)} />
+            <input placeholder="Password" value={password} onChange ={(e) => setPassword(e.target.value)} />
+            <input type="submit" value = "Login!"/>
+        
+    </form>
     </div>
   )
 }
