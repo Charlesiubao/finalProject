@@ -28,11 +28,11 @@ const Login = () => {
     <div className="loginPage">
     { shouldRedirect && <Redirect to={`/`} exact /> }
     <form className ="loginForm" onSubmit={loginForm}>
-          <h2>Login</h2>
+          <h2>Welcome back!</h2>
           
             <input placeholder="Email" value={email} onChange ={(e) => setEmail(e.target.value)} />
             <input placeholder="Password" value={password} onChange ={(e) => setPassword(e.target.value)} />
-            <input type="submit" value = "Login!"/>
+            <input className="button" type="submit" value = "Login!"/>
         
     </form>
     </div>

@@ -15,7 +15,7 @@ const Signup = () => {
     const submitForm = (e) => {
         e.preventDefault()
 
-        axios.post(`${process.env.REACT_APP_BACKEND_URL}/users/signup`, {email, password})
+        axios.post(`${process.env.REACT_APP_BACKEND_URL}/users/signup`, {name, email, password})
         .then((response) => {
             console.log(response)
             localStorage.setItem('userId', response.data.userId)
@@ -30,12 +30,12 @@ const Signup = () => {
         { shouldRedirect && <Redirect to={`/`} exact /> }
       
       <form className="signupForm" onSubmit={submitForm}>
-          <h2>Sign up</h2> 
+          <h2>Join us!</h2> 
               
               <input placeholder="Name" value={name} onChange ={(e) => setName(e.target.value)} />
               <input placeholder="Email" value={email} onChange ={(e) => setEmail(e.target.value)} />
               <input placeholder="Password" value={password} onChange ={(e) => setPassword(e.target.value)} />
-              <input type="submit" value = "Sign Up"/> 
+              <input className="button" type="submit" value = "Sign Up"/> 
           
       </form>
       </div>
