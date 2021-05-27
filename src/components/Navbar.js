@@ -21,24 +21,27 @@ const Navbar = ()=>{
             
             <div>
             <nav className="navbar" style={{textAlign:"right"}}>
+            {user &&
+                <p 
+                style={{textAlign:"left", padding:"10px", margin:"0",backgroundColor:"black"}}>
+                    Hello {user.name.charAt(0).toUpperCase() + user.name.slice(1)}!
+                </p>
+            }
         
             <span className="navLinks">
             <Link to="/">Home</Link>{' | '}
             </span>
-                {localStorage.getItem('userId') ? 
+                {user ? 
                 <span>  
                 <span className="navLinks">
-                <Link to="/products">All Products</Link>{' | '}
+                <Link to="/post">Posts</Link>{' | '}
                 </span>               
-                <span className="navLinks">
-                <Link to="/myorders">My Orders</Link>{' | '}
-                </span>
                 
                 <span className="navLinks">
                 <Link to=" " onClick ={(e) => {
                     e.preventDefault()
                     localStorage.removeItem('userId')
-                    setUser({})
+                    setUser(null)
                     returnHome()
                 }}>Logout</Link>{' | '}
                 </span>

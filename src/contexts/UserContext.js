@@ -4,7 +4,7 @@ import axios from 'axios'
  const UserContext = createContext()
 
  const UserProvider = ({ children }) => {
-     const [user, setUser] = useState({})
+     const [user, setUser] = useState(null)
 
      const fetchUser = () => {
          console.log('hello from fetch user')
@@ -21,7 +21,7 @@ import axios from 'axios'
          }
      }
 
-     useEffect(fetchUser, [])
+    //  useEffect(fetchUser, [])
 
      const state = {
          userState: [user, setUser],

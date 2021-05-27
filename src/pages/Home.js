@@ -1,10 +1,16 @@
 const Home = () => {
-  const latestPost = () => {
-    
+  const AllPost = () => {
+
   }
   return (
       <div>
           Home Page
+
+          <div className="allPosts">
+            <div className='postHolder'>
+
+            </div>
+          </div>
       </div>
   )
 }
