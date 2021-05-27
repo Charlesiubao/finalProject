@@ -43,7 +43,7 @@ const SignupLoginForm = (props) => {
                 {props.showName &&
                 <>
                  {/* <label htmlFor="new-name"><h2>NAME</h2></label> */}
-                 <input placeholder="Name" value={name} onChange={(e)=> {setName(e.target.value)}} />
+                <input placeholder="Name" value={name} onChange={(e)=> {setName(e.target.value)}} />
                 </>
                 }
 

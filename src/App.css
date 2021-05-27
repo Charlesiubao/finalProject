@@ -27,7 +27,7 @@ input {
   color: black;
 }
 
-.loginForm, .signupForm {
+.loginForm, .form, .signupForm {
   margin: 3% auto;
   width: 10em;
   text-align: center;
