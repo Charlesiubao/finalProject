@@ -14,6 +14,7 @@ const Upload = (props) =>{
 
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
+  const [url, setUrl] = useState('')
 
   const handleFileInputChange = (e) => {
       const file = e.target.files[0];
@@ -77,6 +78,7 @@ const handleSubmitFile = (e) => {
       // </form>
 
       <form onSubmit={handleSubmitFile} className="form">
+                
                 
                 <input 
                   value = {title} placeholder = 'title' onChange = {(e)=> setTitle(e.target.value)}
