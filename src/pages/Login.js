@@ -49,7 +49,6 @@ const Login = () => {
         <SignupLoginForm 
         buttonText="LOGIN"
         route="/user/login"
-        //this route value will be passed to SignupLoginForm
         message="Welcome back!"
         title="LOGIN"
         />

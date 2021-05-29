@@ -42,16 +42,13 @@ const SignupLoginForm = (props) => {
             <form className="signupForm loginForm" onSubmit={handleSubmit}>
                 {props.showName &&
                 <>
-                 {/* <label htmlFor="new-name"><h2>NAME</h2></label> */}
                 <input placeholder="Name" value={name} onChange={(e)=> {setName(e.target.value)}} />
                 </>
                 }
 
-                {/* <label htmlFor="new-email"><h2>EMAIL</h2></label> */}
                 <input placeholder="Email" value={email} onChange={(e)=> {setEmail(e.target.value)}} />
-                {/* <label htmlFor="new-password"><h2>PASSWORD</h2></label> */}
                 <input placeholder="Password" type="password" value={password} onChange={(e)=> {setPassword(e.target.value)}} />
-                <input className="button" id="submit-button" type="submit" value={props.buttonText} />
+                <input className="button" id="submit-button" route="/profile" type="submit" value={props.buttonText} />
 
             </form>
         </div>

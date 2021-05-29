@@ -93,16 +93,18 @@ a {
 }
 
 .gallery {
-  margin: 5px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* width: 70px; */
+  /* max-width: 720px; */
 }
 
 .galleryHolder {
   margin: auto;
+  /* max-width: 720px; */
   width: 720px;
+  /* height: 1080px; */
   display:flex;
   flex-direction: column;
   align-items: center;
@@ -111,5 +113,5 @@ a {
 }
 
 Image {
-  margin: 5px;
+  margin: 10px;
 }

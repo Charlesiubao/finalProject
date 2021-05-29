@@ -21,20 +21,17 @@ const Navbar = ()=>{
             
             <div>
             <nav className="navbar" style={{textAlign:"right"}}>
-            {user &&
-                <p 
-                style={{textAlign:"left", padding:"10px", margin:"0",backgroundColor:"black"}}>
-                    Hello {user.name.charAt(0).toUpperCase() + user.name.slice(1)}!
-                </p>
-            }
         
             <span className="navLinks">
             <Link to="/">Home</Link>{' | '}
             </span>
+            <span className="navLinks">
+                <Link to="/profile">Upload</Link>{' | '}
+                </span>        
                 {user ? 
                 <span>  
                 <span className="navLinks">
-                <Link to="/post">Posts</Link>{' | '}
+                <Link to="/profile">Profile</Link>{' | '}
                 </span>               
                 
                 <span className="navLinks">
@@ -53,7 +50,15 @@ const Navbar = ()=>{
                 <Link to="/signup">Sign Up</Link>{' | '}
                 </span>
                 <span className="navLinks">
-                <Link to="/login">Login</Link>
+                <Link to="/login">Login</Link>{' | '}
+                </span>
+                <span className="navLinks">
+                <Link to=" " onClick ={(e) => {
+                    e.preventDefault()
+                    localStorage.removeItem('userId')
+                    setUser(null)
+                    returnHome()
+                }}>Logout</Link>
                 </span>
             </span>
             }

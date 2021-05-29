@@ -36,7 +36,7 @@ function App() {
         exact path="/login"
         render={()=> {
           if (user) {
-            return <Redirect to = '/' />
+            return <Redirect to = '' />
             
           } else {
             return <Login setUser={setUser} />
